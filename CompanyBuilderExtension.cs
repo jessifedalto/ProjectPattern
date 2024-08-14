@@ -11,4 +11,10 @@ public static class CompanyBuilderExtension
         builder.SetFactory(new ArgentinaProcessFactory());
         return builder;
     }
+
+    public static Company.CompanyBuilder InUSA(this Company.CompanyBuilder builder)
+    {
+        builder.SetFactory(new USAProcessFactory());
+        return builder;
+    }
 }
